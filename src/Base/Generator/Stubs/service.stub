@@ -1,0 +1,74 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Modules\$MODULE$\Models\$MODULE$;
+use Modules\$MODULE$\Events\$MODULE$WasCreatedEvent;
+use Modules\$MODULE$\Events\$MODULE$WasUpdatedEvent;
+use Modules\$MODULE$\Events\$MODULE$WasDeletedEvent;
+use Modules\$MODULE$\Contracts\$CLASS$Contract;
+use Modules\$MODULE$\Dtos\Create$CLEAN_NAME$Dto;
+use Modules\$MODULE$\Dtos\Update$CLEAN_NAME$Dto;
+use Illuminate\Database\Eloquent\Collection;
+
+class $CLASS$ implements $CLASS$Contract
+{
+    /**
+     * @param $id
+     * @return $MODULE$|null
+     */
+    public function resolve($id): ?$MODULE$
+    {
+        if ($id instanceof $MODULE$) {
+            return $id;
+        }
+
+        return $MODULE$::find($id);
+    }
+
+    /**
+     * @param $userId
+     * @return $MODULE$[]
+     */
+    public function getByUserId($userId): Collection
+    {
+        return $MODULE$::where('user_id', $userId)->get();
+    }
+
+    /**
+     * @param $id
+     * @return $MODULE$|null
+     */
+    public function update($id, Update$CLEAN_NAME$Dto $data): $MODULE$
+    {
+        $$LOWER_MODULE$ = $this->resolve($id);
+        $$LOWER_MODULE$->update($data);
+        event(new $MODULE$WasUpdatedEvent($$LOWER_MODULE$));
+
+        return $$LOWER_MODULE$;
+    }
+
+    /**
+     * @param $id
+     * @return $MODULE$
+     */
+    public function create(Create$CLEAN_NAME$Dto $data): $MODULE$
+    {
+        $$LOWER_MODULE$ = $MODULE$::create($data);
+        event(new $MODULE$WasCreatedEvent($$LOWER_MODULE$));
+        return $$LOWER_MODULE$;
+    }
+
+    /**
+     * @param $id
+     * @return bool
+     */
+    public function delete($id): bool
+    {
+        $$LOWER_MODULE$ = $this->resolve($id);
+        $deleted = $$LOWER_MODULE$->delete();
+        if($deleted)
+            event(new $MODULE$WasDeletedEvent($$LOWER_MODULE$));
+        return $deleted;
+    }
+}

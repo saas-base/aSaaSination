@@ -1,0 +1,18 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use  Base\Contracts\Abstracts\TestCase;
+
+class $CLASS$ extends TestCase
+{
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testExample()
+    {
+        $this->assertTrue(true);
+    }
+}

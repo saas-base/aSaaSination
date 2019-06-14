@@ -1,0 +1,15 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use  Base\Exceptions\Exception;
+
+class $CLASS$ extends Exception
+{
+
+    public function __construct()
+    {
+        parent::__construct("", 0, null);
+    }
+
+}

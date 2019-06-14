@@ -1,0 +1,23 @@
+<?php
+
+namespace $NAMESPACE$;
+
+use Base\Actions\Action;
+
+class $CLASS$ extends Action
+{
+    public function authorize()
+    {
+        return true;
+    }
+
+    public function rules()
+    {
+        return [];
+    }
+
+    public function handle()
+    {
+        // Execute the action.
+    }
+}
