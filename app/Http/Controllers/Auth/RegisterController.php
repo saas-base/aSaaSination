@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Base\Http\Controllers\Controller;
-use Base\User;
+use Core\Http\Controllers\Controller;
+use Core\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;

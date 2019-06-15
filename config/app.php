@@ -135,7 +135,7 @@ return [
     */
 
     'providers' => [
-
+    
         /*
          * Laravel Framework Service Providers...
          */
@@ -161,20 +161,20 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+    
         /*
          * Package Service Providers...
          */
-
+    
         /*
          * Application Service Providers...
          */
-        Base\Providers\AppServiceProvider::class,
-        Base\Providers\AuthServiceProvider::class,
-        Base\Providers\BroadcastServiceProvider::class,
-        Base\Providers\EventServiceProvider::class,
-        Base\Providers\RouteServiceProvider::class,
-        Base\Providers\BootstrapServiceProvider::class
+        Core\Providers\AppServiceProvider::class,
+        Core\Providers\AuthServiceProvider::class,
+        Core\Providers\BroadcastServiceProvider::class,
+        Core\Providers\EventServiceProvider::class,
+        Core\Providers\RouteServiceProvider::class,
+        Core\Providers\BootstrapServiceProvider::class
 
     ],
 

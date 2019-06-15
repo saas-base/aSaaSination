@@ -4,23 +4,23 @@ namespace Repository\Eloquent;
 
 use Closure;
 use Exception;
-use Illuminate\Container\Container as Application;
-use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
+use Repository\Contracts\Presentable;
+use Illuminate\Database\Eloquent\Model;
+use Core\Events\RepositoryEntityCreated;
+use Core\Events\RepositoryEntityDeleted;
+use Core\Events\RepositoryEntityUpdated;
+use Illuminate\Database\Eloquent\Builder;
+use Repository\Contracts\CriteriaInterface;
+use Repository\Contracts\PresenterInterface;
+use Repository\Traits\ComparesVersionsTrait;
+use Repository\Contracts\RepositoryInterface;
+use Repository\Exceptions\RepositoryException;
+use Illuminate\Container\Container as Application;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
-use Repository\Contracts\CriteriaInterface;
-use Repository\Contracts\Presentable;
-use Repository\Contracts\PresenterInterface;
 use Repository\Contracts\RepositoryCriteriaInterface;
-use Repository\Contracts\RepositoryInterface;
-use Repository\Events\RepositoryEntityCreated;
-use Repository\Events\RepositoryEntityDeleted;
-use Repository\Events\RepositoryEntityUpdated;
-use Repository\Exceptions\RepositoryException;
-use Repository\Traits\ComparesVersionsTrait;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 abstract class BaseRepository implements RepositoryInterface, RepositoryCriteriaInterface
 {

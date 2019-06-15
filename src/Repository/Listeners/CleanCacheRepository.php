@@ -5,7 +5,7 @@ namespace Repository\Listeners;
 use Illuminate\Contracts\Cache\Repository as CacheRepository;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
-use Repository\Abstracts\AbstractRepositoryEvent;
+use Repository\Abstracts\RepositoryEvent;
 use Repository\Contracts\RepositoryInterface;
 use Repository\Helpers\CacheKeys;
 
@@ -37,9 +37,9 @@ class CleanCacheRepository
     }
 
     /**
-     * @param AbstractRepositoryEvent $event
+     * @param RepositoryEvent $event
      */
-    public function handle(AbstractRepositoryEvent $event)
+    public function handle(RepositoryEvent $event)
     {
         try {
             $cleanEnabled = config('repository.cache.clean.enabled', true);

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ESLintProjectComponent">
+    <option name="eslintRcFile" value="$USER_HOME$/.eslintrc.js" />
+    <option name="eslintExecutable" value="$USER_HOME$/.nvm/versions/node/v12.4.0/bin/eslint" />
+    <option name="nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v12.4.0/bin/node" />
+    <option name="pluginEnabled" value="true" />
+    <option name="autoFix" value="true" />
+    <option name="ext" value=".js,.vue,.jsx" />
+  </component>
+</project>

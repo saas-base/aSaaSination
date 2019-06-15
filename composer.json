@@ -58,7 +58,7 @@
     "autoload": {
         "psr-4": {
             "Modules\\": "src/Modules/",
-            "Base\\": "src/Base",
+            "Core": "Core",
             "Repository\\": "src/Repository"
         },
         "classmap": [
@@ -66,8 +66,8 @@
             "database/factories"
         ],
         "files": [
-            "src/Base/Support/helpers.php",
-            "src/Base/Support/cloudflare_helper.php"
+            "Core/Support/helpers.php",
+            "Core/Support/cloudflare_helper.php"
         ]
     },
     "autoload-dev": {

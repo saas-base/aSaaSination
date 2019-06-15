@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Base\Http\Controllers\Controller;
+use Core\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends Controller
